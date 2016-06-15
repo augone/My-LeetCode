@@ -1,7 +1,14 @@
 class Solution {
-	private boolean[] valid = new boolean[9];
-	
-    public int numberOfPatterns(int m, int n) {
+	private static boolean[] valid = new boolean[9];
+	public static void main(String[] args)
+	{
+		sop(numberOfPatterns(3,9));
+	}
+	public static void sop(Object obj )
+	{
+		System.out.println(obj);
+	}
+    public static int numberOfPatterns(int m, int n) {
 		int result = 0 ;
         for(int len = m; len <=n; len++)
 		{
@@ -13,7 +20,7 @@ class Solution {
 		}
 		return result;
     }
-	public boolean testValidation(int last, int next)
+	public static boolean testValidation(int last, int next)
 	{
 		if(valid[next]) return false;
 		if(last == -1)
@@ -28,7 +35,7 @@ class Solution {
 		return valid[mid];
 		
 	}
-	public int goCount(int last, int len)
+	public static int goCount(int last, int len)
 	{
 		if (len == 0)
 			return 1;
